@@ -1,16 +1,34 @@
-﻿ /// <reference path="angular.min.js" />
+﻿/// <reference path="angular.min.js" />
 
 var myApp = angular
     .module("myModule", [])
     .controller("myController", function ($scope) {
-
-        var employee = [
-            { firstName: "Captain", lastName: "America", gender: "Male", salary: "70000" },
-            { firstName: "Iron", lastName: "Man", gender: "Male", salary: "70000" },
-            { firstName: "Doctor", lastName: "Strange", gender: "Male", salary: "90000" },
-            { firstName: "Super", lastName: "Man", gender: "Male", salary: "70000" },
-            { firstName: "Black", lastName: "Widow", gender: "Female", salary: "80000" },
+        var countries = [
+            {
+                name: "India",
+                cities: [
+                    { name: "Delhi" },
+                    { name: "Bangalore" },
+                    { name: "Mumbai" },
+                ]
+            },
+            {
+                name: "Europe",
+                cities: [
+                    { name: "Luxembourg" },
+                    { name: "Switzerland" },
+                    { name: "Paris" },
+                ]
+            },
+            {
+                name: "USA",
+                cities: [
+                    { name: "California" },
+                    { name: "New York" },
+                    { name: "Chicago" },
+                ]
+            }
         ];
 
-        $scope.employee = employee;
+        $scope.countries = countries;
     });
