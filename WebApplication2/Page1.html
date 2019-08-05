@@ -7,15 +7,6 @@
     <title></title>
 </head>
 <body ng-controller="myController">
-    <ul>
-        <li ng-repeat="country in countries" ng-init="parentIndex=$index">
-            {{ country.name }} - Index = {{ $index }}
-            <ul>
-                <li ng-repeat="city in country.cities">
-                    {{ city.name }} - Parent index = {{ parentIndex }} , Index = {{ $index }}
-                </li>
-            </ul>
-        </li>
-    </ul>
+   
 </body>
 </html>
