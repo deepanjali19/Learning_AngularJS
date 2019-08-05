@@ -3,10 +3,30 @@
 <head>
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/script.js"></script>
+    <link href="Page1.css" rel="stylesheet" />
     <meta charset="utf-8" />
     <title></title>
 </head>
 <body ng-controller="myController">
-   
+   <table>
+       <thead>
+           <tr>
+               <th>Name</th>
+               <th>Date of Birth</th>
+               <th>Gender</th>
+               <th>Salary (number)</th>
+               <th>Salary (currency)</th>
+           </tr>
+       </thead>
+       <tbody ng-repeat="employee in employees">
+           <tr>
+               <td> {{employee.name | uppercase}} </td>
+               <td> {{employee.birthDate | date:"dd/MM/yyyy"}} </td>
+               <td> {{employee.gender | lowercase}} </td>
+               <td> {{employee.salary | number:1}} </td>
+               <td> {{employee.salary | currency}} </td>
+           </tr>
+       </tbody>
+   </table>
 </body>
 </html>
