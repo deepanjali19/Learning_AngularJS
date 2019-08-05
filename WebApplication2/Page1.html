@@ -8,7 +8,9 @@
     <title></title>
 </head>
 <body ng-controller="myController">
-   <table>
+   Rows to display: <input type="number" step="1" min="0" max="5" ng-model="rowLimit" />
+    <br /><br />
+    <table>
        <thead>
            <tr>
                <th>Name</th>
@@ -18,7 +20,7 @@
                <th>Salary (currency)</th>
            </tr>
        </thead>
-       <tbody ng-repeat="employee in employees">
+       <tbody ng-repeat="employee in employees | limitTo:rowLimit">
            <tr>
                <td> {{employee.name | uppercase}} </td>
                <td> {{employee.birthDate | date:"dd/MM/yyyy"}} </td>
